@@ -15,7 +15,7 @@ if "OPENAI_API_KEY" not in os.environ:
 openai.api_key = os.environ["OPENAI_API_KEY"]
 
 # Initialize ChromaDB client with persistent storage
-chroma_client = chromadb.PersistentClient(path="/home/kaizen/Projects/Sumit/Movies_llma/chromadb_storage")
+chroma_client = chromadb.PersistentClient(path="chromadb_storage")
 
 # Check if collection exists and delete it
 collection_name = "movies_collection"

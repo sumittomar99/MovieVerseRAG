@@ -8,7 +8,7 @@ from generate_story import generate_mixed_story
 import openai
 
 # Initialize ChromaDB client and collection with persistent storage
-chroma_client = chromadb.PersistentClient(path="/home/kaizen/Projects/Sumit/Movies_llma/chromadb_storage")
+chroma_client = chromadb.PersistentClient(path="chromadb_storage")
 chroma_collection = chroma_client.get_collection("movies_collection")
 
 # Initialize embedding model

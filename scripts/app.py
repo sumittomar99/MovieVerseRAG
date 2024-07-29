@@ -17,7 +17,7 @@ def load_css(file_name):
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 # Load the custom CSS
-load_css("styles.css")
+load_css("scripts/styles.css")
 
 # Sidebar
 with st.sidebar:
