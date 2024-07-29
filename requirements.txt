@@ -1,0 +1,8 @@
+pandas
+numpy
+pymongo
+chromadb
+llama_index
+llama-index-vector-stores-chroma
+streamlit
+spacy

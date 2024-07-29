@@ -1,0 +1,4 @@
+__pycache__/
+.vscode/
+chromadb_storage/
+extras/

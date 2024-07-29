@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css');
+
+body {
+    background-color: #e5e7eb;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1f2937;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #4b5563;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.input-container {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-area-container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.text-area {
+    width: 100%;
+    max-width: 900px; /* Adjusted width */
+    height: 60px; /* Adjusted height */
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 1rem;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    font-size: 1rem;
+    color: #374151;
+    resize: none;
+}
+
+.text-area:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+.search-button {
+    background-color: #3b82f6;
+    color: white;
+    font-weight: 700;
+    padding: 0.50rem 3rem;
+    border-radius: 2rem;
+    transition: background-color 0.3s;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #628ae0ce;
+}
+
+.generated-story {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-top: 2rem;
+    font-size: 1rem;
+    color: #374151;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.generated-story h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #1f2937;
+    text-align: center;
+}
+
+.generated-story p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #374151;
+}
+
+.error-message {
+    background-color: #fee2e2;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    color: #b91c1c;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-top: 2rem;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.results-container {
+    background-color: #f3f4f6;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.results-header {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #1f2937;
+    text-align:start;
+    margin-bottom: 1.5rem;
+}
+
+.results-content {
+    font-size: 1rem;
+    color: #374151;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.story-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1f2937;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
