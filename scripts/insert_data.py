@@ -16,7 +16,7 @@ openai.api_key = os.environ["OPENAI_API_KEY"]
 
 # Initialize ChromaDB client with persistent storage
 chroma_client = chromadb.PersistentClient(path="chromadb_storage")
-
+print("Initiated to insert !")
 # Check if collection exists and delete it
 collection_name = "movies_collection"
 all_collections = chroma_client.list_collections()
