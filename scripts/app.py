@@ -73,7 +73,7 @@ if submit_button:
             #     story_title = story_title.replace("**","")
             #     mixed_story = mixed_story[:title_start - len("Title:")] + mixed_story[title_end:]
             #     st.markdown(f'<div class="story-title">{story_title}</div>', unsafe_allow_html=True)
-            st.markdown(f'<div class="results-content">{mixed_story}</div>', unsafe_allow_html=True)
-            st.markdown('</div>', unsafe_allow_html=True)
-        elif error_message:
-            st.markdown(f'<div class="error-message"><p>{error_message}</p></div>', unsafe_allow_html=True)
+        st.markdown(f'<div class="results-content">{mixed_story}</div>', unsafe_allow_html=True)
+        st.markdown('</div>', unsafe_allow_html=True)
+    elif error_message:
+        st.markdown(f'<div class="error-message"><p>{error_message}</p></div>', unsafe_allow_html=True)
