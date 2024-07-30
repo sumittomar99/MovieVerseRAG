@@ -18,7 +18,7 @@ import spacy
 #     [sys.executable, "-m", "spacy", "download", "en_core_web_sm"]
 # )
 
-spacy.cli.download("en_core_web_sm")
+# spacy.cli.download("en_core_web_sm")
 if not os.path.exists("chromadb_storage"):
     import scripts.insert_data as insert_data
 

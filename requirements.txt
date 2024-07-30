@@ -7,3 +7,4 @@ llama-index-vector-stores-chroma==0.1.10
 streamlit==1.36.0
 spacy==3.7.5
 pysqlite3-binary
+https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1-py3-none-any.whl
