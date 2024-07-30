@@ -11,6 +11,8 @@ import sys
 if not os.path.exists("chromadb_storage"):
     import scripts.insert_data as insert_data
 
+print("Data has been inserted successfully !")
+
 from scripts.query_data import query_data
 
 # Streamlit app configuration
