@@ -6,7 +6,12 @@ sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 import streamlit as st
 import os
 from datetime import datetime, date
-
+import subprocess
+import sys
+#python -m spacy download en_core_web_sm
+subprocess.check_call(
+    [sys.executable, "-m", "spacy", "download", "en_core_web_sm"]
+)
 if not os.path.exists("chromadb_storage"):
     import scripts.insert_data as insert_data
 
