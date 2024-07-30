@@ -27,13 +27,15 @@ Explore StoryWeaver AI and experience the power of AI-assisted storytelling. To 
 
 ### Screenshots
 
-![image](https://github.com/user-attachments/assets/aa48ecc2-c3b0-437b-a109-680387a08291)
-
----
-
-![image](https://github.com/user-attachments/assets/66ffd32a-2a23-4c88-9c67-74a4a8d9e6a4)
+![image](https://github.com/user-attachments/assets/2049c711-9f48-4d46-b548-e6db4be408aa)
 
 
 ---
 
-![image](https://github.com/user-attachments/assets/e56b5682-0177-4875-85a6-8292e171f23a)
+![image](https://github.com/user-attachments/assets/ed895d61-0dc3-4a52-8ec1-f4683d924578)
+
+
+---
+
+![image](https://github.com/user-attachments/assets/46a8a0f4-57be-4f97-a089-28dcc4843627)
+
