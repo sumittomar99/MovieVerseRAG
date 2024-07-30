@@ -2,11 +2,12 @@ import streamlit as st
 import sys
 import os
 from datetime import datetime, date
-
+print("SQLite Version :",os.system("sqlite3 --version"))
+print("PIP Freeze :",os.system("pip freeze"))
 # Ensure the scripts directory is in the system path
 sys.path.append(os.path.join(os.path.dirname(__file__), 'scripts'))
 
-from query_data import query_data
+from scripts.query_data import query_data
 
 # Streamlit app configuration
 st.set_page_config(page_title="StoryWeaver AI", page_icon="✍️", layout="wide")
@@ -17,7 +18,7 @@ def load_css(file_name):
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 # Load the custom CSS
-load_css("scripts/styles.css")
+load_css("./scripts/styles.css")
 
 # Sidebar
 with st.sidebar:

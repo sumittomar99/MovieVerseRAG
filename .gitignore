@@ -2,3 +2,4 @@ __pycache__/
 .vscode/
 chromadb_storage/
 extras/
+story_weaver.egg-info

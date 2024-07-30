@@ -4,11 +4,11 @@ from llama_index.embeddings.openai import OpenAIEmbedding
 from llama_index.core.vector_stores import MetadataFilter, MetadataFilters, FilterOperator
 import chromadb
 from datetime import datetime
-from generate_story import generate_mixed_story
+from scripts.generate_story import generate_mixed_story
 import openai
 
 # Initialize ChromaDB client and collection with persistent storage
-chroma_client = chromadb.PersistentClient(path="../chromadb_storage")
+chroma_client = chromadb.PersistentClient(path="chromadb_storage")
 chroma_collection = chroma_client.get_collection("movies_collection")
 
 # Initialize embedding model

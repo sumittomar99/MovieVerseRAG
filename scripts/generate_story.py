@@ -1,5 +1,5 @@
-from model_config import generate_response, get_openai_client
-from prompt_generation import generate_prompts
+from scripts.model_config import generate_response, get_openai_client
+from scripts.prompt_generation import generate_prompts
 
 def generate_mixed_story(user_story, movie_descriptions, openai_api_key):
 
