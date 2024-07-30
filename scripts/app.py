@@ -5,23 +5,9 @@ sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 import streamlit as st
 import os
-from datetime import datetime, date
-import subprocess
 import sys
 
 
-#python -m spacy download en_core_web_sm
-# set SPACY_DATA=C:\path\to\your\directory
-import spacy
-# os.environ["SPACY_DATA"] = os.getcwd()
-# subprocess.check_call(
-#     [sys.executable, "-m", "spacy", "download", "en_core_web_sm"]
-# )
-print(os.system("uv pip show spacy"))
-# subprocess.run(
-    
-# )
-# spacy.cli.download("en_core_web_sm")
 if not os.path.exists("chromadb_storage"):
     import scripts.insert_data as insert_data
 
