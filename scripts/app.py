@@ -53,14 +53,14 @@ if submit_button:
     elif not user_story:
         st.markdown('<div class="error-message"><p>Error: Story prompt is required.</p></div>', unsafe_allow_html=True)
 
-elif user_story and openai_api_key:
-    min_score = 70
-    similarity_top_k = 20
-
-    filters = [{"key": "score", "operator": ">=", "value": min_score}]
-
-    results, mixed_story, error_message = query_data("", filters, similarity_top_k, user_story, openai_api_key)
-
-    st.markdown(mixed_story)
-elif error_message:
-    st.markdown(f'<div class="error-message"><p>{error_message}</p></div>', unsafe_allow_html=True)
+    elif user_story and openai_api_key:
+        min_score = 70
+        similarity_top_k = 20
+    
+        filters = [{"key": "score", "operator": ">=", "value": min_score}]
+    
+        results, mixed_story, error_message = query_data("", filters, similarity_top_k, user_story, openai_api_key)
+    
+        st.markdown(mixed_story)
+    elif error_message:
+        st.markdown(f'<div class="error-message"><p>{error_message}</p></div>', unsafe_allow_html=True)
