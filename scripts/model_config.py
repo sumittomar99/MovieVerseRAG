@@ -5,17 +5,18 @@ def get_openai_client(api_key):
     openai.api_key = api_key
     return openai
 
-def generate_response(prompt, api_key):
+def generate_response(prompt, api_key, model_name):
     try:
         client = get_openai_client(api_key)
         response = client.chat.completions.create(
-            model="gpt-4o-mini",
+            model=model_name,
             messages=[
                 {"role": "system", "content": "You are a creative assistant."},
                 {"role": "user", "content": prompt}
             ]
         )
         generated_story = response.choices[0].message.content
+        print(f"Selected Model is :",model_name)
         return generated_story, None
     except openai.AuthenticationError:
         return None, "The provided API key is invalid. Please check your API key and try again."

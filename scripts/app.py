@@ -11,8 +11,6 @@ import sys
 if not os.path.exists("chromadb_storage"):
     import scripts.insert_data as insert_data
 
-print("Data has been inserted successfully !")
-
 from scripts.query_data import query_data
 
 # Streamlit app configuration
@@ -30,9 +28,9 @@ load_css("./scripts/styles.css")
 with st.sidebar:
     st.header("Settings")
     openai_api_key = st.text_input("Enter your OpenAI API key:", type="password", key="api-key")
-    
+
     # Dropdown for selecting OpenAI models
-    model_options = ["GPT-4o", "GPT-4o mini", "GPT-4"]
+    model_options = ["gpt-4o", "gpt-4o-mini"]
     selected_model = st.selectbox("Select OpenAI Model:", model_options)
 
 # Title and subtitle
@@ -53,14 +51,14 @@ if submit_button:
     elif not user_story:
         st.markdown('<div class="error-message"><p>Error: Story prompt is required.</p></div>', unsafe_allow_html=True)
 
-    elif user_story and openai_api_key:
+    if user_story and openai_api_key:
         min_score = 70
         similarity_top_k = 20
     
         filters = [{"key": "score", "operator": ">=", "value": min_score}]
     
-        results, mixed_story, error_message = query_data("", filters, similarity_top_k, user_story, openai_api_key)
+        results, mixed_story, error_message = query_data("", selected_model, filters, similarity_top_k, user_story, openai_api_key)
     
         st.markdown(mixed_story)
-    elif error_message:
-        st.markdown(f'<div class="error-message"><p>{error_message}</p></div>', unsafe_allow_html=True)
+        if error_message:
+            st.markdown(f'<div class="error-message"><p>{error_message}</p></div>', unsafe_allow_html=True)

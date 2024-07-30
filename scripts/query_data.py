@@ -24,7 +24,7 @@ index = VectorStoreIndex.from_vector_store(vector_store, storage_context=storage
 def format_date(timestamp, date_format):
     return datetime.fromtimestamp(timestamp).strftime(date_format)
 
-def query_data(query, filters=[], similarity_top_k=5, user_story ="", openai_api_key=""):
+def query_data(query, selected_model, filters=[], similarity_top_k=5, user_story ="", openai_api_key=""):
     metadata_filters = MetadataFilters(filters=[
         MetadataFilter(key=filter["key"], operator=FilterOperator(filter["operator"]), value=filter["value"])
         for filter in filters
@@ -59,6 +59,6 @@ def query_data(query, filters=[], similarity_top_k=5, user_story ="", openai_api
         movie_descriptions.append(metadata.get("overview", "N/A"))
 
     if user_story:
-        mixed_story, error_message = generate_mixed_story(user_story, movie_descriptions, openai_api_key)
+        mixed_story, error_message = generate_mixed_story(user_story, movie_descriptions, openai_api_key, selected_model)
     
     return results, mixed_story, error_message
