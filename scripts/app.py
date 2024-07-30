@@ -14,7 +14,7 @@ import sys
 # set SPACY_DATA=C:\path\to\your\directory
 
 subprocess.check_call(
-    ["export", f"SPACY_DATA={os.getcwd()}"]
+    ["/bin/bash","export", f"SPACY_DATA={os.getcwd()}"]
 )
 subprocess.check_call(
     [sys.executable, "-m", "spacy", "download", "en_core_web_sm"]
