@@ -58,5 +58,5 @@ if submit_button:
         results, mixed_story, error_message = query_data("", filters, similarity_top_k, user_story, openai_api_key)
 
         st.markdown(mixed_story)
-elif error_message:
-    st.markdown(f'<div class="error-message"><p>{error_message}</p></div>', unsafe_allow_html=True)
+    elif error_message:
+        st.markdown(f'<div class="error-message"><p>{error_message}</p></div>', unsafe_allow_html=True)
