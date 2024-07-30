@@ -90,7 +90,7 @@ def load_documents_with_metadata(file_path):
     return documents
 
 # Load documents with metadata
-documents = load_documents_with_metadata("path/to/your/movies_dataset_full.csv")
+documents = load_documents_with_metadata("./data/movies_dataset_full.csv")
 
 # Create vector store and storage context
 vector_store = ChromaVectorStore(chroma_collection=chroma_collection)
