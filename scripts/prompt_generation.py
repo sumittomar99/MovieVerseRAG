@@ -1,12 +1,11 @@
 import re
 import spacy
-import en_core_web_sm
 
 def generate_prompts(user_story, movie_descriptions):
     prompts = []
     
     # Load spaCy English model
-    nlp = spacy.load(en_core_web_sm.__file__)
+    nlp = spacy.load("en_core_web_sm")
 
     # Function to replace character names
     def replace_character_names(description):
