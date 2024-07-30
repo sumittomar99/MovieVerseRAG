@@ -50,30 +50,13 @@ if submit_button:
         st.markdown('<div class="error-message"><p>Error: Story prompt is required.</p></div>', unsafe_allow_html=True)
 
     if user_story and openai_api_key:
-        # Set explicit values for score and similarity_top_k
         min_score = 70
         similarity_top_k = 20
 
-        # Construct filters based on explicit values
         filters = [{"key": "score", "operator": ">=", "value": min_score}]
 
-        # Pass the OpenAI API key to the query_data function
         results, mixed_story, error_message = query_data("", filters, similarity_top_k, user_story, openai_api_key)
 
-        # Display the generated mixed story
-        # if mixed_story:
-        #     # Remove any potential sub-headings and newlines
-        #     cleaned_story = mixed_story.replace("##", "").replace("**", "").replace("\n", " ").strip()
-        #     st.markdown('<h2 class="results-header">Generated Story : </h2>', unsafe_allow_html=True)
-             # Extract and format the title from the mixed story if it exists
-            # if "Title:" in mixed_story:
-            #     title_start = mixed_story.find("Title:") + len("Title:")
-            #     title_end = mixed_story.find("\n", title_start)
-            #     story_title = mixed_story[title_start:title_end].strip()
-            #     story_title = story_title.replace("**","")
-            #     mixed_story = mixed_story[:title_start - len("Title:")] + mixed_story[title_end:]
-            #     st.markdown(f'<div class="story-title">{story_title}</div>', unsafe_allow_html=True)
         st.markdown(mixed_story)
-        # st.markdown('</div>', unsafe_allow_html=True)
     elif error_message:
         st.markdown(f'<div class="error-message"><p>{error_message}</p></div>', unsafe_allow_html=True)
