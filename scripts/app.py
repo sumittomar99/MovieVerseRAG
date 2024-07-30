@@ -61,10 +61,10 @@ if submit_button:
         results, mixed_story, error_message = query_data("", filters, similarity_top_k, user_story, openai_api_key)
 
         # Display the generated mixed story
-        if mixed_story:
-            # Remove any potential sub-headings and newlines
-            cleaned_story = mixed_story.replace("##", "").replace("**", "").replace("\n", " ").strip()
-            st.markdown('<h2 class="results-header">Generated Story : </h2>', unsafe_allow_html=True)
+        # if mixed_story:
+        #     # Remove any potential sub-headings and newlines
+        #     cleaned_story = mixed_story.replace("##", "").replace("**", "").replace("\n", " ").strip()
+        #     st.markdown('<h2 class="results-header">Generated Story : </h2>', unsafe_allow_html=True)
              # Extract and format the title from the mixed story if it exists
             # if "Title:" in mixed_story:
             #     title_start = mixed_story.find("Title:") + len("Title:")
