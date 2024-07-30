@@ -30,6 +30,10 @@ load_css("./scripts/styles.css")
 with st.sidebar:
     st.header("Settings")
     openai_api_key = st.text_input("Enter your OpenAI API key:", type="password", key="api-key")
+    
+    # Dropdown for selecting OpenAI models
+    model_options = ["GPT-4o", "GPT-4o mini", "GPT-4"]
+    selected_model = st.selectbox("Select OpenAI Model:", model_options)
 
 # Title and subtitle
 st.markdown('<div class="title">StoryWeaver AI</div>', unsafe_allow_html=True)
