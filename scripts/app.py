@@ -3,17 +3,12 @@ import sys
 
 sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
-
 import streamlit as st
 import os
 from datetime import datetime, date
-print("SQLite Version :",os.system("sqlite3 --version"))
-print("PIP Freeze :",os.system("pip freeze"))
-print("Install :",os.system("uv pip install -e ../."))
 
-
-# Ensure the scripts directory is in the system path
-# sys.path.append(os.path.join(os.path.dirname(__file__), 'scripts'))
+if not os.path.exists("chromadb_storage"):
+    import scripts.insert_data as insert_data
 
 from scripts.query_data import query_data
 
