@@ -7,7 +7,7 @@ print("PIP Freeze :",os.system("pip freeze"))
 print("Install :",os.system("uv pip install -e ../."))
 
 # Ensure the scripts directory is in the system path
-sys.path.append(os.path.join(os.path.dirname(__file__), 'scripts'))
+# sys.path.append(os.path.join(os.path.dirname(__file__), 'scripts'))
 
 from scripts.query_data import query_data
 
