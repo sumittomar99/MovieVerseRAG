@@ -4,7 +4,7 @@ import os
 from datetime import datetime, date
 print("SQLite Version :",os.system("sqlite3 --version"))
 print("PIP Freeze :",os.system("pip freeze"))
-print("Install :",os.system("pip install -e ../."))
+print("Install :",os.system("uv pip install -e ../."))
 
 # Ensure the scripts directory is in the system path
 sys.path.append(os.path.join(os.path.dirname(__file__), 'scripts'))
