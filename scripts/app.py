@@ -66,13 +66,13 @@ if submit_button:
             cleaned_story = mixed_story.replace("##", "").replace("**", "").replace("\n", " ").strip()
             st.markdown('<h2 class="results-header">Generated Story : </h2>', unsafe_allow_html=True)
              # Extract and format the title from the mixed story if it exists
-            if "Title:" in mixed_story:
-                title_start = mixed_story.find("Title:") + len("Title:")
-                title_end = mixed_story.find("\n", title_start)
-                story_title = mixed_story[title_start:title_end].strip()
-                story_title = story_title.replace("**","")
-                mixed_story = mixed_story[:title_start - len("Title:")] + mixed_story[title_end:]
-                st.markdown(f'<div class="story-title">{story_title}</div>', unsafe_allow_html=True)
+            # if "Title:" in mixed_story:
+            #     title_start = mixed_story.find("Title:") + len("Title:")
+            #     title_end = mixed_story.find("\n", title_start)
+            #     story_title = mixed_story[title_start:title_end].strip()
+            #     story_title = story_title.replace("**","")
+            #     mixed_story = mixed_story[:title_start - len("Title:")] + mixed_story[title_end:]
+            #     st.markdown(f'<div class="story-title">{story_title}</div>', unsafe_allow_html=True)
             st.markdown(f'<div class="results-content">{mixed_story}</div>', unsafe_allow_html=True)
             st.markdown('</div>', unsafe_allow_html=True)
         elif error_message:
