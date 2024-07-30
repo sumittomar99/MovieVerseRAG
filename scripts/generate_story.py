@@ -10,7 +10,6 @@ def generate_mixed_story(user_story, movie_descriptions, openai_api_key):
     Rules to follow:
     1. Title must be given
     2. Not necessarily the story should have converstaion
-    3. Order the sequence with 7 step of story writing format rule.
     """
     generated_story, error_message  = generate_response(system_prompt + combined_prompt, openai_api_key)
     
