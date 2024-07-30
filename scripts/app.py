@@ -12,11 +12,13 @@ import sys
 
 #python -m spacy download en_core_web_sm
 # set SPACY_DATA=C:\path\to\your\directory
-
+import spacy
 os.environ["SPACY_DATA"] = os.getcwd()
-subprocess.check_call(
-    [sys.executable, "-m", "spacy", "download", "en_core_web_sm"]
-)
+# subprocess.check_call(
+#     [sys.executable, "-m", "spacy", "download", "en_core_web_sm"]
+# )
+
+spacy.cli.download("en_core_web_sm")
 if not os.path.exists("chromadb_storage"):
     import scripts.insert_data as insert_data
 
