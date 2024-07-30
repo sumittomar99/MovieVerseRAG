@@ -53,7 +53,7 @@ if submit_button:
     elif not user_story:
         st.markdown('<div class="error-message"><p>Error: Story prompt is required.</p></div>', unsafe_allow_html=True)
 
-    if user_story and openai_api_key:
+    elif user_story and openai_api_key:
         min_score = 70
         similarity_top_k = 20
 
