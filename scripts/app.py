@@ -60,7 +60,7 @@ if submit_button:
     results, mixed_story, error_message = query_data("", selected_model, filters, similarity_top_k, user_story, openai_api_key)
 
 
-    if user_story and openai_api_key:
+    if user_story and openai_api_key and mixed_story!=None:
         st.markdown(mixed_story)
     elif error_message:
         st.markdown(f'<div class="error-message"><p>{error_message}</p></div>', unsafe_allow_html=True)
