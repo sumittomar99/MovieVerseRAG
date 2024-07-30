@@ -13,8 +13,8 @@ import sys
 #python -m spacy download en_core_web_sm
 # set SPACY_DATA=C:\path\to\your\directory
 
-subprocess.check_call(
-    ["/bin/bash","export", f"SPACY_DATA={os.getcwd()}"]
+subprocess.run(
+    ["export", f"SPACY_DATA={os.getcwd()}"]
 )
 subprocess.check_call(
     [sys.executable, "-m", "spacy", "download", "en_core_web_sm"]
