@@ -6,7 +6,7 @@ def generate_mixed_story(user_story, movie_descriptions, openai_api_key):
     prompts = generate_prompts(user_story, movie_descriptions)
 
     combined_prompt = " ".join(prompts)
-    system_prompt = "Your a great Movie script writer and Story writer. Your task is to generate well formulated and structured story with each details to support story."
+    system_prompt = "Your a great Movie script writer and Story writer. Your task is to generate well formulated and structured story with each details to support story. Make it readable to the users with different sections of the story. Use Markdown to make it appealing."
     generated_story, error_message  = generate_response(system_prompt + combined_prompt, openai_api_key)
     
     return generated_story, error_message 
